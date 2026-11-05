@@ -1,0 +1,41 @@
+[
+  {
+    "source": "public/assets/references/masterfit-fachada.png",
+    "optimized": "public/assets/references/masterfit-fachada-1280.webp",
+    "before": 3588797,
+    "after": 120740,
+    "dimensions": [
+      1280,
+      643
+    ],
+    "mode": "Fotografia: derivado responsivo WebP qualidade 88; propor\u00e7\u00e3o preservada, original mantido. N\u00e3o \u00e9 pixel-id\u00eantico."
+  },
+  {
+    "source": "public/assets/brand/masterfit-logo-extracao-fiel-transparente.png",
+    "optimized": "public/assets/brand/masterfit-logo-extracao-fiel-transparente.webp",
+    "before": 716185,
+    "after": 426214,
+    "rgbaPixelsIdentical": true
+  },
+  {
+    "source": "public/assets/brand/marquee/masterfit-original.png",
+    "optimized": "public/assets/brand/marquee/masterfit-original.webp",
+    "before": 1240708,
+    "after": 735670,
+    "rgbaPixelsIdentical": true
+  },
+  {
+    "source": "public/assets/brand/marquee/technogym-original.png",
+    "optimized": "public/assets/brand/marquee/technogym-original.webp",
+    "before": 57377,
+    "after": 9458,
+    "rgbaPixelsIdentical": true
+  },
+  {
+    "source": "public/assets/brand/marquee/hammer-strength-original.png",
+    "optimized": "public/assets/brand/marquee/hammer-strength-original.webp",
+    "before": 21985,
+    "after": 10110,
+    "rgbaPixelsIdentical": true
+  }
+]

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+.env
+.env.*
+!.env.example
+
+# Materiais brutos e capturas locais; assets do site ficam em public/.
+/*.mp4
+/*.png
+/preview-*.jpg
+/rascunhos/

@@ -1,0 +1,147 @@
+.logo-marquee {
+  --marquee-gap: clamp(3rem, 5vw, 6rem);
+  position: relative;
+  height: 140px;
+  background: #050505;
+  color: #fff;
+  border-block: 1px solid var(--color-border);
+  overflow: hidden;
+}
+.logo-marquee-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: logo-conveyor var(--marquee-duration, 24s) linear infinite;
+  will-change: transform;
+}
+.logo-marquee-group {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--marquee-gap);
+  padding-inline: calc(var(--marquee-gap) / 2);
+  min-width: 100vw;
+  height: 100%;
+}
+.logo-marquee-item {
+  flex: none;
+  opacity: 0.9;
+  transition: opacity 250ms ease;
+}
+.logo-marquee-item:hover {
+  opacity: 1;
+}
+.marquee-logo {
+  display: block;
+  width: auto;
+  color: inherit;
+}
+.logo-marquee-item.technogym .marquee-logo {
+  height: 42px;
+}
+.logo-marquee-item.hammer-strength .marquee-logo {
+  height: 56px;
+}
+.logo-marquee-item.masterfit .marquee-logo {
+  height: 66px;
+}
+.logo-marquee::before,
+.logo-marquee::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: clamp(2.5rem, 8vw, 8rem);
+  pointer-events: none;
+  z-index: 1;
+}
+.logo-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, #050505, transparent);
+}
+.logo-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, #050505, transparent);
+}
+.logo-marquee-toggle {
+  position: absolute;
+  z-index: 2;
+  right: 0.5rem;
+  bottom: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+.logo-marquee-toggle:hover {
+  color: var(--color-primary);
+}
+.logo-marquee.is-paused .logo-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes logo-conveyor {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 760px) {
+  .logo-marquee {
+    height: 104px;
+    --marquee-gap: 2.5rem;
+  }
+  .logo-marquee-item.technogym .marquee-logo {
+    height: 32px;
+  }
+  .logo-marquee-item.hammer-strength .marquee-logo {
+    height: 44px;
+  }
+  .logo-marquee-item.masterfit .marquee-logo {
+    height: 48px;
+  }
+  .logo-marquee-toggle {
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee {
+    height: auto;
+    min-height: 140px;
+  }
+  .logo-marquee-track {
+    animation: none;
+    transform: none;
+    width: 100%;
+    will-change: auto;
+  }
+  .logo-marquee-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+    width: 100%;
+    padding: 1.5rem;
+    height: auto;
+    gap: 1.5rem 3rem;
+  }
+  .logo-marquee-group + .logo-marquee-group,
+  .logo-marquee-item:nth-child(n + 4),
+  .logo-marquee-toggle {
+    display: none;
+  }
+  .logo-marquee::before,
+  .logo-marquee::after {
+    display: none;
+  }
+}

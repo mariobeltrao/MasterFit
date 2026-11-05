@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "phase": "hero hero-cinematic phase-cinema",
+      "test": "Carrapateira via Enter",
+      "video": [
+        {
+          "muted": true,
+          "paused": true,
+          "ready": 4,
+          "src": "http://127.0.0.1:4173/videos/masterfit-carrapateira-satellite.mp4",
+          "time": 19.875
+        }
+      ]
+    },
+    {
+      "active": 2,
+      "hash": "#trajetoria",
+      "progress": "0.7702231784647012",
+      "test": "Timeline"
+    },
+    {
+      "active": "História de Bárbara Lins",
+      "count": 8,
+      "panelHeight": 371.9444580078125,
+      "test": "Leque por clique"
+    },
+    {
+      "active": "História de Cecilia Holmes",
+      "focus": "Mostrar história de Cecilia Holmes, 5 de 5 estrelas",
+      "outline": "solid",
+      "test": "Leque por teclado"
+    },
+    {
+      "active": "História de Toth Lyres",
+      "test": "Hover no leque por movimento do ponteiro"
+    },
+    {
+      "active": "História de Cecilia Holmes",
+      "test": "História permanece ao sair"
+    },
+    {
+      "focus": "Abrir menu",
+      "open": "false",
+      "test": "Menu mobile Escape"
+    },
+    {
+      "open": "false",
+      "path": "/contato",
+      "test": "Menu mobile navegação"
+    },
+    {
+      "h1": "UNIDADE AEROCLUBE",
+      "path": "/unidades/aeroclube",
+      "plans": 10,
+      "test": "Footer + reload Aeroclube"
+    },
+    {
+      "dialog": true,
+      "test": "Galeria ampliada"
+    },
+    {
+      "dialog": false,
+      "test": "Galeria Escape"
+    },
+    {
+      "cinemaHidden": false,
+      "phase": "hero hero-cinematic phase-entering",
+      "test": "Hero com um clique no layout mobile"
+    },
+    {
+      "phase": "hero hero-cinematic phase-cinema",
+      "test": "Hero hover São José",
+      "video": [
+        {
+          "ready": 4,
+          "source": "http://127.0.0.1:4173/videos/masterfit-saojose-satellite.mp4",
+          "time": 22.958333
+        }
+      ]
+    }
+  ],
+  "console": [],
+  "limitations": [
+    "Layout mobile + clique/teclado testados. Nenhum aparelho físico touch foi conectado.",
+    "Preferência do sistema reduced-motion não foi alterada.",
+    "Leitores de tela reais não executados; semântica e árvore de acessibilidade inspecionadas."
+  ]
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/unidades",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/sobre",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/contato",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/unidades/aeroclube",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/unidades/sao-jose-de-piranhas",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/unidades/carrapateira",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/rota-inexistente",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "path": "/index.html",
+    "status": 200,
+    "type": "text/html;charset=utf-8"
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "type": "text/plain"
+  },
+  {
+    "path": "/videos/masterfit-bessa-satellite.mp4",
+    "status": 200,
+    "type": "video/mp4"
+  },
+  {
+    "path": "/videos/masterfit-saojose-satellite.mp4",
+    "status": 200,
+    "type": "video/mp4"
+  },
+  {
+    "path": "/videos/masterfit-saojose-final.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/videos/masterfit-bessa-final.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/videos/masterfit-carrapateira-final.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/videos/masterfit-carrapateira-satellite.mp4",
+    "status": 200,
+    "type": "video/mp4"
+  },
+  {
+    "path": "/assets/index-uTplSSHT.js",
+    "status": 200,
+    "type": "text/javascript"
+  },
+  {
+    "path": "/assets/index-KGPMIt9m.css",
+    "status": 200,
+    "type": "text/css"
+  },
+  {
+    "path": "/assets/references/masterfit-fachada.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "path": "/assets/references/masterfit-fachada-1280.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/brand/masterfit-logo-extracao-fiel-transparente.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "path": "/assets/brand/masterfit-logo-extracao-fiel-transparente.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/units/carrapateira/fachada.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/sao-jose-de-piranhas/fachada.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-4-640.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-1-1122.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-4-320.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-4-1122.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-1-320.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-1-640.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-3-640.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-2-320.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-2-640.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-3-1122.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-2-1122.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/units/aeroclube/interior-3-320.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/brand/marquee/hammer-strength-original.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "path": "/assets/brand/marquee/masterfit-original.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "path": "/assets/brand/marquee/technogym-original.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/brand/marquee/hammer-strength-original.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/brand/marquee/technogym-original.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "path": "/assets/brand/marquee/masterfit-original.webp",
+    "status": 200,
+    "type": "image/webp"
+  }
+]

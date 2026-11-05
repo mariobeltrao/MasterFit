@@ -1,0 +1,651 @@
+/* Scoped to the Hero; all other page layouts remain in global.css. */
+.hero.hero-cinematic {
+  --cinema-height: 620px;
+  --cinema-ease: cubic-bezier(0.22, 0.68, 0.12, 1);
+  padding-top: 2.5rem;
+  overflow: clip;
+}
+.hero.hero-cinematic > .container {
+  display: block;
+}
+.hero-scene {
+  position: relative;
+  isolation: isolate;
+  min-height: 620px;
+}
+.hero-selection {
+  display: grid;
+  grid-template-columns: 1.04fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+  min-height: 620px;
+}
+.hero-cinematic .hero-copy {
+  position: relative;
+  z-index: 1;
+  transition:
+    transform 650ms var(--cinema-ease),
+    opacity 400ms ease;
+}
+.hero-cinematic .hero-copy > .eyebrow {
+  font-size: 0.58rem;
+}
+.hero.hero-cinematic h1 {
+  font-size: clamp(3rem, 5vw, 5.3rem);
+}
+.hero-destinations {
+  position: relative;
+  min-width: 0;
+  padding: 1.5rem 0;
+  perspective: 1200px;
+}
+.destination-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.8rem;
+}
+.destination-heading > span:last-child {
+  color: var(--color-primary);
+}
+.destination-routes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  padding: 1rem 0.7rem;
+}
+.destination-route {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  min-width: 0;
+  height: 350px;
+  padding: 1.25rem 0.8rem;
+  overflow: hidden;
+  text-align: left;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  transform: rotateY(-10deg) rotateZ(5deg) translateY(0);
+  transition:
+    transform 650ms var(--cinema-ease),
+    opacity 450ms ease,
+    border-color 350ms ease,
+    color 350ms ease;
+  isolation: isolate;
+}
+.destination-route:nth-child(2) {
+  margin-top: 1rem;
+}
+.destination-route:nth-child(3) {
+  margin-top: 2rem;
+}
+.destination-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 53% center;
+  z-index: -3;
+  opacity: 0.55;
+  transform: scale(1.07);
+  transition:
+    transform 650ms var(--cinema-ease),
+    opacity 450ms ease;
+}
+.destination-image-placeholder {
+  background-color: var(--color-surface-elevated);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 24px,
+    var(--color-grid) 24px 25px
+  );
+}
+.destination-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    180deg,
+    var(--color-caption),
+    transparent 40%,
+    var(--color-caption) 85%
+  );
+}
+.destination-route.is-selected {
+  color: var(--color-primary);
+  border-color: var(--color-primary-dark);
+  transform: rotateY(0) rotateZ(0) translateY(-7px) scale(1.025);
+}
+.destination-route.is-selected .destination-image {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+.destination-routes:has(.is-selected) .destination-route:not(.is-selected) {
+  opacity: 0.66;
+}
+.destination-route:focus-visible {
+  outline-offset: 5px;
+  z-index: 3;
+}
+.destination-number {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.destination-number > span {
+  display: block;
+  font-size: 0.45rem;
+  letter-spacing: 0.09em;
+  margin-top: 0.2rem;
+  color: var(--color-text-secondary);
+}
+.destination-arrow {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  width: clamp(70px, 8vw, 118px);
+  height: clamp(70px, 8vw, 118px);
+  transform: translateX(-50%);
+  transition: transform 650ms var(--cinema-ease);
+}
+.destination-route.is-selected .destination-arrow {
+  transform: translate(-44%, -7px);
+}
+.destination-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.destination-caption strong {
+  color: var(--color-text);
+  line-height: 1.2;
+  font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.destination-caption > span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.57rem;
+  line-height: 1.5;
+}
+.destination-description {
+  margin-top: 2.5rem;
+  min-height: 125px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+.destination-description .eyebrow {
+  color: var(--color-primary);
+  font-size: 0.58rem;
+  margin-bottom: 0.6rem;
+}
+.destination-description p {
+  font-size: 0.75rem;
+}
+.destination-hint {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 0.6rem;
+  margin-top: 0.8rem;
+}
+.hero-cinema-layer {
+  position: absolute;
+  inset: 1.5rem 0;
+  z-index: 5;
+  animation: cinema-reveal 650ms var(--cinema-ease) both;
+}
+.hero-cinematic.phase-entering .destination-route:not(.is-selected),
+.hero-cinematic.phase-cinema .destination-route:not(.is-selected) {
+  transform: translate(25px, 25px) rotateZ(9deg);
+  opacity: 0;
+}
+.phase-entering .destination-route.is-selected,
+.phase-cinema .destination-route.is-selected {
+  transform: translate(-20px, 0) scale(1.18);
+}
+.phase-entering .destination-description,
+.phase-cinema .destination-description {
+  opacity: 0;
+}
+.phase-returning .hero-cinema-layer {
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events: none;
+}
+.cinema-stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: min(100%, calc(100svh - var(--header-height) - 90px));
+  min-height: 460px;
+  background: var(--color-background);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.cinema-video,
+.cinema-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cinema-video {
+  transition: opacity 200ms ease;
+}
+.cinema-video.is-hidden {
+  opacity: 0;
+}
+.cinema-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    var(--color-caption),
+    transparent 25%,
+    transparent 55%,
+    var(--color-caption)
+  );
+}
+.cinema-topbar {
+  position: absolute;
+  inset: 1rem 1rem auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cinema-location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--color-text);
+}
+.cinema-location > span {
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  color: var(--color-primary);
+}
+.cinema-location strong {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.cinema-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  min-height: 44px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background: var(--color-caption);
+  font-size: 0.7rem;
+}
+.cinema-control:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary-dark);
+}
+.cinema-control:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.cinema-status {
+  position: absolute;
+  top: 7.5rem;
+  left: 1rem;
+  color: var(--color-text);
+  font-size: 0.75rem;
+}
+.cinema-playback-controls {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cinema-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-border);
+}
+.cinema-progress > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  transform-origin: left center;
+  transition: transform 200ms linear;
+}
+.cinema-reticle {
+  position: absolute;
+  inset: 6rem 1.5rem 6rem;
+  pointer-events: none;
+}
+.cinema-reticle > span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+.cinema-reticle > span:first-child {
+  left: 0;
+  top: 0;
+  border-left: 1px solid var(--color-text-secondary);
+  border-top: 1px solid var(--color-text-secondary);
+}
+.cinema-reticle > span:last-child {
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-text-secondary);
+}
+.cinema-result {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1rem;
+  right: 1rem;
+  animation: destination-arrive 450ms ease both;
+}
+.cinema-result .eyebrow {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.cinema-result h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+}
+.cinema-result h2:focus {
+  outline: none;
+}
+.cinema-result > p {
+  color: var(--color-text);
+  font-size: 0.8rem;
+  margin: 0.8rem 0 1.25rem;
+  max-width: 600px;
+}
+.cinema-result-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.cinema-result-actions .button {
+  gap: 1rem;
+  font-size: 0.72rem;
+}
+.cinema-replay {
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  margin-top: 0.7rem;
+}
+.cinema-replay:hover {
+  color: var(--color-primary);
+}
+.playback-complete .cinema-shade,
+.playback-error .cinema-shade {
+  background: linear-gradient(
+    180deg,
+    var(--color-caption),
+    transparent 22%,
+    var(--color-caption) 92%
+  );
+}
+@keyframes cinema-reveal {
+  0%,
+  30% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes destination-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1600px) {
+  .hero.hero-cinematic {
+    --cinema-height: 690px;
+    padding-top: 3rem;
+  }
+  .hero-scene,
+  .hero-selection {
+    min-height: 690px;
+  }
+}
+@media (max-width: 1050px) {
+  .hero-selection {
+    grid-template-columns: 0.95fr 1fr;
+    gap: 2rem;
+  }
+  .hero.hero-cinematic h1 {
+    font-size: clamp(2.8rem, 5.2vw, 4rem);
+  }
+  .destination-route {
+    height: 320px;
+    padding-inline: 0.6rem;
+  }
+  .destination-caption strong {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 760px) {
+  .hero.hero-cinematic {
+    padding-top: 1.5rem;
+  }
+  .hero-selection {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    min-height: auto;
+  }
+  .hero-cinematic .hero-copy {
+    padding-bottom: 1.75rem;
+  }
+  .hero.hero-cinematic h1 {
+    font-size: clamp(2.7rem, 9vw, 4.5rem);
+  }
+  .hero-scene {
+    min-height: 640px;
+  }
+  .hero-destinations {
+    padding-top: 0.5rem;
+  }
+  .destination-routes {
+    gap: 0.5rem;
+    padding-inline: 0.35rem;
+  }
+  .destination-route {
+    height: 260px;
+    padding: 0.8rem 0.5rem;
+  }
+  .destination-arrow {
+    width: 80px;
+    height: 80px;
+    top: 25%;
+  }
+  .destination-caption strong {
+    font-size: 0.85rem;
+  }
+  .destination-caption > span {
+    font-size: 0.5rem;
+    gap: 0.2rem;
+  }
+  .destination-number {
+    font-size: 0.7rem;
+  }
+  .destination-number > span {
+    font-size: 0.38rem;
+  }
+  .destination-description {
+    margin-top: 2rem;
+    min-height: 120px;
+  }
+  .hero-cinema-layer {
+    position: absolute;
+  }
+  .cinema-stage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    min-height: 0;
+  }
+  .cinema-topbar {
+    inset: 1rem 1rem auto;
+    flex-direction: column;
+  }
+  .cinema-topbar .cinema-control {
+    align-self: flex-end;
+  }
+  .cinema-location strong {
+    font-size: 0.65rem;
+  }
+  .cinema-location > span {
+    font-size: 0.5rem;
+  }
+  .cinema-playback-controls {
+    inset: auto 1rem 1rem;
+    gap: 0.5rem;
+  }
+  .cinema-control {
+    font-size: 0.65rem;
+    padding-inline: 0.6rem;
+  }
+  .cinema-status {
+    top: 8.5rem;
+    bottom: auto;
+    left: 1rem;
+    font-size: 0.68rem;
+  }
+  .cinema-result {
+    bottom: 1.25rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  .cinema-result h2 {
+    font-size: 2.5rem;
+  }
+  .cinema-result > p {
+    font-size: 0.8rem;
+    margin-block: 0.7rem 1rem;
+  }
+  .cinema-result-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cinema-result-actions .button {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.7rem 1rem;
+  }
+  .cinema-replay {
+    font-size: 0.7rem;
+  }
+  .cinema-reticle {
+    inset: 9rem 1rem 5rem;
+  }
+}
+@media (max-width: 360px) {
+  .hero.hero-cinematic h1 {
+    font-size: 2.45rem;
+  }
+  .destination-caption strong {
+    font-size: 0.75rem;
+  }
+  .destination-arrow {
+    width: 66px;
+    height: 66px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic *,
+  .hero-cinematic *::before,
+  .hero-cinematic *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .destination-route,
+  .destination-route.is-selected {
+    transform: none;
+  }
+}
+/* Hide the selection only after expansion; retain its dimensions to avoid page jumps. */
+.hero-cinematic.phase-cinema .destination-selection {
+  visibility: hidden;
+}
+.hero-cinematic:not(.phase-selection) .hero-destinations {
+  overflow: clip;
+}
+
+/* Portals expand only inside the existing right-hand component. */
+.cinema-preview-result {
+  bottom: 6.25rem;
+}
+.cinema-preview-result .eyebrow {
+  margin-bottom: 0.5rem;
+}
+.cinema-preview-result .cinema-result-actions {
+  margin-top: 1rem;
+}
+.cinema-topbar {
+  flex-wrap: wrap;
+}
+.cinema-topbar .cinema-control {
+  margin-left: auto;
+}
+.cinema-cover-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 10rem;
+  background: var(--color-surface-elevated);
+  color: var(--color-text-secondary);
+}
+.cinema-cover-placeholder span {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.cinema-cover-placeholder svg {
+  color: var(--color-primary);
+}
+@media (max-width: 760px) {
+  .hero-cinema-layer {
+    inset: 0.5rem 0 1.5rem;
+  }
+  .hero-destinations {
+    min-height: 590px;
+  }
+  .cinema-result h2 {
+    font-size: clamp(1.7rem, 7vw, 2.5rem);
+    overflow-wrap: anywhere;
+  }
+  .cinema-preview-result {
+    bottom: 6rem;
+  }
+}

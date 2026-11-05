@@ -1,0 +1,13 @@
+
+> masterfit@0.1.0 build
+> tsc -b && vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 1636 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.15 kB │ gzip:   0.54 kB
+dist/assets/index-KGPMIt9m.css   64.84 kB │ gzip:  13.21 kB
+dist/assets/index-uTplSSHT.js   341.00 kB │ gzip: 105.78 kB
+✓ built in 934ms

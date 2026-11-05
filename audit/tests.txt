@@ -1,0 +1,14 @@
+✔ the nearby cursor attracts particles and release restores their anchors (2.0425ms)
+✔ particles outside the magnetic radius stay at rest (0.364375ms)
+✔ 30 and 60 FPS converge to the same magnetic resting position (0.242292ms)
+✔ zero distance and long frames do not introduce NaNs or large jumps (0.922583ms)
+✔ mobile density is lower, large screens are capped, and colors are 70/30 (0.764167ms)
+✔ mobile ambient movement stays subtle without a cursor (0.811375ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 249.61025

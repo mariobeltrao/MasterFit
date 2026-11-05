@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-05",
+  "commercial": "13 opções/parcelamentos/URLs e condições conferidas por assertions",
+  "assets": [
+    "/assets/references/masterfit-fachada-1280.webp",
+    "/assets/units/aeroclube/interior-4-1122.jpg",
+    "/assets/units/aeroclube/interior-4-320.jpg",
+    "/assets/units/aeroclube/interior-4-640.jpg",
+    "/assets/units/aeroclube/interior-1-1122.jpg",
+    "/assets/units/aeroclube/interior-1-320.jpg",
+    "/assets/units/aeroclube/interior-1-640.jpg",
+    "/assets/units/aeroclube/interior-2-1122.jpg",
+    "/assets/units/aeroclube/interior-2-320.jpg",
+    "/assets/units/aeroclube/interior-2-640.jpg",
+    "/assets/units/aeroclube/interior-3-1122.jpg",
+    "/assets/units/aeroclube/interior-3-320.jpg",
+    "/assets/units/aeroclube/interior-3-640.jpg",
+    "/assets/units/sao-jose-de-piranhas/fachada.jpg",
+    "/videos/masterfit-saojose-satellite.mp4",
+    "/videos/masterfit-saojose-final.jpg",
+    "/assets/units/carrapateira/fachada.jpg",
+    "/videos/masterfit-carrapateira-satellite.mp4",
+    "/videos/masterfit-carrapateira-final.jpg",
+    "/assets/brand/marquee/technogym-original.webp",
+    "/assets/brand/marquee/hammer-strength-original.webp",
+    "/assets/brand/marquee/masterfit-original.webp",
+    "/assets/brand/masterfit-logo-extracao-fiel-transparente.webp",
+    "/videos/masterfit-bessa-satellite.mp4",
+    "/videos/masterfit-bessa-final.jpg"
+  ],
+  "missingAssets": [],
+  "secretScan": {
+    "files": 50,
+    "suspects": [],
+    "scope": "heurístico, fontes/configuração; sem histórico Git, pois não há .git"
+  },
+  "publicFiles": [
+    {
+      "path": "public/assets/brand/marquee/hammer-strength-original.png",
+      "bytes": 21985
+    },
+    {
+      "path": "public/assets/brand/marquee/hammer-strength-original.webp",
+      "bytes": 10110
+    },
+    {
+      "path": "public/assets/brand/marquee/masterfit-original.png",
+      "bytes": 1240708
+    },
+    {
+      "path": "public/assets/brand/marquee/masterfit-original.webp",
+      "bytes": 735670
+    },
+    {
+      "path": "public/assets/brand/marquee/technogym-original.png",
+      "bytes": 57377
+    },
+    {
+      "path": "public/assets/brand/marquee/technogym-original.webp",
+      "bytes": 9458
+    },
+    {
+      "path": "public/assets/brand/masterfit-logo-extracao-fiel-transparente.png",
+      "bytes": 716185
+    },
+    {
+      "path": "public/assets/brand/masterfit-logo-extracao-fiel-transparente.webp",
+      "bytes": 426214
+    },
+    {
+      "path": "public/assets/references/masterfit-fachada-1280.webp",
+      "bytes": 120740
+    },
+    {
+      "path": "public/assets/references/masterfit-fachada.png",
+      "bytes": 3588797
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-1-1122.jpg",
+      "bytes": 231355
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-1-320.jpg",
+      "bytes": 38682
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-1-640.jpg",
+      "bytes": 100625
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-2-1122.jpg",
+      "bytes": 400799
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-2-320.jpg",
+      "bytes": 60215
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-2-640.jpg",
+      "bytes": 175242
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-3-1122.jpg",
+      "bytes": 414574
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-3-320.jpg",
+      "bytes": 67837
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-3-640.jpg",
+      "bytes": 190097
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-4-1122.jpg",
+      "bytes": 482460
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-4-320.jpg",
+      "bytes": 62481
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-4-640.jpg",
+      "bytes": 194817
+    },
+    {
+      "path": "public/assets/units/carrapateira/fachada.jpg",
+      "bytes": 359044
+    },
+    {
+      "path": "public/assets/units/sao-jose-de-piranhas/fachada.jpg",
+      "bytes": 143350
+    },
+    {
+      "path": "public/robots.txt",
+      "bytes": 23
+    },
+    {
+      "path": "public/videos/masterfit-bessa-final.jpg",
+      "bytes": 76482
+    },
+    {
+      "path": "public/videos/masterfit-bessa-satellite.mp4",
+      "bytes": 8607223
+    },
+    {
+      "path": "public/videos/masterfit-carrapateira-final.jpg",
+      "bytes": 61819
+    },
+    {
+      "path": "public/videos/masterfit-carrapateira-satellite.mp4",
+      "bytes": 12431628
+    },
+    {
+      "path": "public/videos/masterfit-saojose-final.jpg",
+      "bytes": 83871
+    },
+    {
+      "path": "public/videos/masterfit-saojose-satellite.mp4",
+      "bytes": 17723413
+    }
+  ]
+}

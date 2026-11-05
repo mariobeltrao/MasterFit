@@ -1,0 +1,30 @@
+{
+  "src/data/units.ts": {
+    "unchanged": false,
+    "allowedChange": "URL da fachada Aeroclube: PNG original \u2192 derivado WebP, sem alterar dados comerciais."
+  },
+  "src/data/pricing.ts": {
+    "unchanged": true
+  },
+  "src/data/monthlyPricing.ts": {
+    "unchanged": true
+  },
+  "src/data/hero.ts": {
+    "unchanged": true
+  },
+  "src/data/reviews.ts": {
+    "unchanged": true
+  },
+  "src/data/trajectory.ts": {
+    "unchanged": true
+  },
+  "src/components/home/Hero.tsx": {
+    "unchanged": true
+  },
+  "src/components/home/HeroVideoExperience.tsx": {
+    "unchanged": true
+  },
+  "src/components/home/ReviewStack3D.tsx": {
+    "unchanged": true
+  }
+}

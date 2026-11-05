@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@source not "../../audit";
+:root {
+  color-scheme: dark;
+  --color-background: #0b0b0d;
+  --color-surface: #18191d;
+  --color-surface-elevated: #24252a;
+  --color-primary: #f4cf1a;
+  --color-primary-hover: #ffe147;
+  --color-primary-dark: #d9aa17;
+  --color-brand-gold: #d09636;
+  --color-text: #f7f7f7;
+  --color-text-secondary: #b8bac1;
+  --color-border: #383940;
+  --color-purple-atmosphere: #7137a8;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-on-primary: var(--color-background);
+  --color-grid: color-mix(in srgb, var(--color-border) 35%, transparent);
+  --color-caption: color-mix(in srgb, var(--color-background) 90%, transparent);
+  --color-atmosphere-glow: color-mix(
+    in srgb,
+    var(--color-purple-atmosphere) 15%,
+    transparent
+  );
+  --shadow-menu: 0 12px 12px
+    color-mix(in srgb, var(--color-background) 50%, transparent);
+  --font-body: "Arial", "Helvetica Neue", sans-serif;
+  --font-display: "Arial Black", "Helvetica Neue", sans-serif;
+  --container: 1280px;
+  --gutter: clamp(1.25rem, 4.5vw, 5rem);
+  --section-space: clamp(4rem, 7vw, 7.5rem);
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --radius: 2px;
+  --header-height: 88px;
+  --transition: 160ms ease;
+}
