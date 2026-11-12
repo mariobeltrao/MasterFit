@@ -20,19 +20,11 @@ Site institucional da rede de academias **MasterFit**, com três unidades na Par
 
 ## Filme de lançamento
 
-<!--
-  COMO ADICIONAR: edite este README no github.com e arraste o arquivo
-  LauchingVideoMaster.mp4 para a linha em branco abaixo deste comentário.
-  O GitHub vai gerar um link https://github.com/user-attachments/assets/...
-  Mantenha esse link sozinho na linha, com uma linha em branco antes e depois.
--->
+https://github.com/user-attachments/assets/d68c0107-1052-4fe4-b00d-80734f30e67e
 
 ## O site em movimento
 
-<!--
-  COMO ADICIONAR: arraste o arquivo LauchingVideoMasterSite-github.mp4
-  (versão comprimida, abaixo de 10 MB) para a linha em branco abaixo.
--->
+https://github.com/user-attachments/assets/762175fb-d9c4-4fe9-a08a-fc7442f6e6de
 
 ---
 
