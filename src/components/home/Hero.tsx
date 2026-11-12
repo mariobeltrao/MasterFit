@@ -243,7 +243,7 @@ export function Hero() {
                           if (node) triggers.current.set(index, node);
                           else triggers.current.delete(index);
                         }}
-                        aria-label={`Abrir prévia: ${item.name}`}
+                        aria-label={`${item.id} / MASTER FIT ${item.name} ${item.video ? "Iniciar jornada" : "Ver prévia"}`}
                         aria-controls="hero-cinema"
                         aria-expanded={active && cinemaIndex === index}
                         onPointerEnter={(event) =>
