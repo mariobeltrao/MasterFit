@@ -15,7 +15,25 @@ export function UnitGallery({
   const dialogRef = useRef<HTMLDialogElement>(null);
   const gesture = useRef<{ x: number; y: number } | null>(null);
   const swiped = useRef(false);
+  const thumbnailsRef = useRef<HTMLDivElement>(null);
   const photo = photos[selected] || photos[0];
+
+  // Keeps the active thumbnail visible in the strip without scrolling the page.
+  useEffect(() => {
+    const strip = thumbnailsRef.current;
+    const thumb = strip?.children[selected] as HTMLElement | undefined;
+    if (!strip || !thumb) return;
+    const start =
+      thumb.getBoundingClientRect().left -
+      strip.getBoundingClientRect().left +
+      strip.scrollLeft;
+    const end = start + thumb.offsetWidth;
+    if (start >= strip.scrollLeft && end <= strip.scrollLeft + strip.clientWidth) return;
+    strip.scrollTo({
+      left: start,
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    });
+  }, [selected]);
   function move(delta: number) {
     setSelected((index) => (index + delta + photos.length) % photos.length);
   }
@@ -102,7 +120,7 @@ export function UnitGallery({
           </button>
         </div>
       </div>
-      <div className="unit-gallery-thumbnails">
+      <div className="unit-gallery-thumbnails" ref={thumbnailsRef}>
         {photos.map((image, index) => (
           <button
             type="button"

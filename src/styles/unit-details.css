@@ -201,11 +201,23 @@
   font-variant-numeric: tabular-nums;
   color: var(--color-text);
 }
+/* Faixa com 4 miniaturas visíveis; as demais aparecem com rolagem lateral. */
 .unit-gallery-thumbnails {
+  --thumb-gap: 0.65rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.65rem;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * var(--thumb-gap)) / 4);
+  gap: var(--thumb-gap);
   margin-top: 0.8rem;
+  padding-bottom: 0.4rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.unit-gallery-thumbnails button {
+  scroll-snap-align: start;
 }
 .unit-gallery-thumbnails button {
   padding: 3px;
@@ -316,7 +328,7 @@
     font-size: 2.8rem;
   }
   .unit-gallery-thumbnails {
-    gap: 0.4rem;
+    --thumb-gap: 0.4rem;
   }
 }
 @media (max-width: 760px) {

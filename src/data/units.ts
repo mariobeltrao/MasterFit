@@ -109,7 +109,66 @@ const aeroclube: Unit = {
       image: 3,
       alt: "Estações de musculação e suportes de anilhas da unidade Aeroclube.",
     },
-  ].map(({ image, alt }) => ({
+    // Fotos horizontais (landscape) ficam inteiras; as verticais seguem o recorte 4:5.
+    {
+      image: 5,
+      landscape: true,
+      alt: "Vista do piso superior para as áreas de musculação e cardio da unidade Aeroclube.",
+    },
+    {
+      image: 6,
+      landscape: true,
+      alt: "Área de musculação com máquinas, colunas e iluminação de LED no teto.",
+    },
+    {
+      image: 7,
+      landscape: true,
+      alt: "Estações de cabos e máquinas de musculação sob iluminação roxa.",
+    },
+    {
+      image: 8,
+      landscape: true,
+      alt: "Fileiras de máquinas de musculação e suportes de anilhas na unidade Aeroclube.",
+    },
+    {
+      image: 9,
+      landscape: true,
+      alt: "Área de pesos livres com halteres, bancos e máquinas de musculação.",
+    },
+    {
+      image: 10,
+      alt: "Máquinas de musculação de carga livre sob iluminação geométrica no teto.",
+    },
+    {
+      image: 11,
+      alt: "Estação de agachamento com anilhas diante de um letreiro motivacional.",
+    },
+    {
+      image: 12,
+      alt: "Máquinas para pernas ao lado do letreiro “Work hard, you are strong”.",
+    },
+    {
+      image: 13,
+      alt: "Equipamento de musculação em estrutura metálica sob iluminação roxa.",
+    },
+    {
+      image: 14,
+      alt: "Máquinas de musculação, incluindo banco Scott, na unidade Aeroclube.",
+    },
+    {
+      image: 15,
+      alt: "Estações de cabos e polias junto à parede iluminada.",
+    },
+    {
+      image: 16,
+      alt: "Máquinas de musculação sob as luzes de LED em formato de seta no teto.",
+    },
+    {
+      image: 17,
+      landscape: true,
+      alt: "Fachada da MasterFit Aeroclube decorada com balões.",
+    },
+  ].map(({ image, alt, landscape }) => ({
     src: `/assets/units/aeroclube/interior-${image}-1122.jpg`,
     srcSet: [320, 640, 1122]
       .map(
@@ -120,7 +179,7 @@ const aeroclube: Unit = {
     thumbnail: `/assets/units/aeroclube/interior-${image}-320.jpg`,
     alt,
     width: 1122,
-    height: 1402,
+    height: landscape ? 748 : 1402,
   })),
   // Categories visible in the supplied photographs; no counts or additional facilities inferred.
   amenities: [
