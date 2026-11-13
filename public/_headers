@@ -1,0 +1,5 @@
+# Cloudflare Pages: mesmos cabeçalhos de segurança definidos em vercel.json.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
