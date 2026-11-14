@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { site } from "../data/site";
 import { units } from "../data/units";
 export function usePageNavigation() {
   const { pathname, hash } = useLocation();
@@ -11,16 +12,32 @@ export function usePageNavigation() {
       "/contato": "Contato",
     };
     const title = unit?.name || titles[pathname] || "Página não encontrada";
+    const description = unit
+      ? `Conheça a MasterFit ${unit.name}: planos, horários, localização e canais oficiais de contato.`
+      : `${title}. Explore a MasterFit e suas unidades Aeroclube, São José de Piranhas e Carrapateira.`;
     document.title = `${title} | MasterFit`;
     document
       .querySelector('meta[name="description"]')
-      ?.setAttribute(
-        "content",
-        unit
-          ? `Conheça a MasterFit ${unit.name}: planos, horários, localização e canais oficiais de contato.`
-          : `${title}. Explore a MasterFit e suas unidades Aeroclube, São José de Piranhas e Carrapateira.`,
-      );
+      ?.setAttribute("content", description);
     const known = Boolean(unit || titles[pathname]);
+    // Canonical and share URLs always point to the official domain (never www or pages.dev).
+    const url = `${site.url}${pathname === "/" ? "/" : pathname}`;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (known) canonical?.setAttribute("href", url);
+    else canonical?.remove();
+    if (known && !canonical) {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      link.setAttribute("href", url);
+      document.head.appendChild(link);
+    }
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", url);
+    document
+      .querySelector('meta[property="og:title"]')
+      ?.setAttribute("content", `${title} | MasterFit`);
+    document
+      .querySelector('meta[property="og:description"]')
+      ?.setAttribute("content", description);
     let robots = document.querySelector('meta[name="robots"]');
     if (!robots) {
       robots = document.createElement("meta");

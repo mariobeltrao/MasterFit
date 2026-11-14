@@ -1,5 +1,7 @@
 export const site = {
   name: "MasterFit",
+  // Domínio oficial: base para canonical, og:url e sitemap.
+  url: "https://masterfitacademia.com.br",
   tagline: "Seu próximo movimento começa aqui.",
   description:
     "Três unidades. Um novo ponto de partida. Encontre o seu espaço e dê o próximo passo na sua rotina.",
