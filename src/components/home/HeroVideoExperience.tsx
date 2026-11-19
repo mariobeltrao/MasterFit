@@ -7,8 +7,11 @@ import {
   Play,
   RotateCcw,
   SkipForward,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
 import type { HeroDestination } from "../../data/hero";
+import { useIntroSoundtrack } from "../../hooks/useIntroSoundtrack";
 
 type Playback = "loading" | "playing" | "paused" | "complete" | "error";
 interface Props {
@@ -46,6 +49,11 @@ export function HeroVideoExperience({
   const activeRef = useRef(false);
   const complete = playback === "complete";
   const error = playback === "error";
+  const soundtrack = useIntroSoundtrack({
+    enabled: hasVideo && !reducedMotion && started,
+    playing: ready && !exiting && playback === "playing",
+    resetKey: attempt,
+  });
 
   function updatePlayback(next: Playback) {
     playbackRef.current = next;
@@ -243,6 +251,24 @@ export function HeroVideoExperience({
               )}
               {playback === "paused" ? "Continuar" : "Pausar"}
             </button>
+            {soundtrack.available && (
+              <button
+                type="button"
+                className="cinema-control cinema-sound"
+                onClick={soundtrack.toggle}
+                aria-pressed={soundtrack.soundOn}
+                aria-label={soundtrack.soundOn ? "Silenciar" : "Ativar som"}
+              >
+                {soundtrack.soundOn ? (
+                  <Volume2 size={16} aria-hidden="true" />
+                ) : (
+                  <VolumeX size={16} aria-hidden="true" />
+                )}
+                <span className="cinema-control-label">
+                  {soundtrack.soundOn ? "Som ligado" : "Som desligado"}
+                </span>
+              </button>
+            )}
             <button
               type="button"
               className="cinema-control"

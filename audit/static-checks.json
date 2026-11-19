@@ -15,14 +15,51 @@
     "/assets/units/aeroclube/interior-3-1122.jpg",
     "/assets/units/aeroclube/interior-3-320.jpg",
     "/assets/units/aeroclube/interior-3-640.jpg",
+    "/assets/units/aeroclube/interior-5-1122.jpg",
+    "/assets/units/aeroclube/interior-5-320.jpg",
+    "/assets/units/aeroclube/interior-5-640.jpg",
+    "/assets/units/aeroclube/interior-6-1122.jpg",
+    "/assets/units/aeroclube/interior-6-320.jpg",
+    "/assets/units/aeroclube/interior-6-640.jpg",
+    "/assets/units/aeroclube/interior-7-1122.jpg",
+    "/assets/units/aeroclube/interior-7-320.jpg",
+    "/assets/units/aeroclube/interior-7-640.jpg",
+    "/assets/units/aeroclube/interior-8-1122.jpg",
+    "/assets/units/aeroclube/interior-8-320.jpg",
+    "/assets/units/aeroclube/interior-8-640.jpg",
+    "/assets/units/aeroclube/interior-9-1122.jpg",
+    "/assets/units/aeroclube/interior-9-320.jpg",
+    "/assets/units/aeroclube/interior-9-640.jpg",
+    "/assets/units/aeroclube/interior-10-1122.jpg",
+    "/assets/units/aeroclube/interior-10-320.jpg",
+    "/assets/units/aeroclube/interior-10-640.jpg",
+    "/assets/units/aeroclube/interior-11-1122.jpg",
+    "/assets/units/aeroclube/interior-11-320.jpg",
+    "/assets/units/aeroclube/interior-11-640.jpg",
+    "/assets/units/aeroclube/interior-12-1122.jpg",
+    "/assets/units/aeroclube/interior-12-320.jpg",
+    "/assets/units/aeroclube/interior-12-640.jpg",
+    "/assets/units/aeroclube/interior-13-1122.jpg",
+    "/assets/units/aeroclube/interior-13-320.jpg",
+    "/assets/units/aeroclube/interior-13-640.jpg",
+    "/assets/units/aeroclube/interior-14-1122.jpg",
+    "/assets/units/aeroclube/interior-14-320.jpg",
+    "/assets/units/aeroclube/interior-14-640.jpg",
+    "/assets/units/aeroclube/interior-15-1122.jpg",
+    "/assets/units/aeroclube/interior-15-320.jpg",
+    "/assets/units/aeroclube/interior-15-640.jpg",
+    "/assets/units/aeroclube/interior-16-1122.jpg",
+    "/assets/units/aeroclube/interior-16-320.jpg",
+    "/assets/units/aeroclube/interior-16-640.jpg",
+    "/assets/units/aeroclube/interior-17-1122.jpg",
+    "/assets/units/aeroclube/interior-17-320.jpg",
+    "/assets/units/aeroclube/interior-17-640.jpg",
     "/assets/units/sao-jose-de-piranhas/fachada.jpg",
     "/videos/masterfit-saojose-satellite.mp4",
     "/videos/masterfit-saojose-final.jpg",
     "/assets/units/carrapateira/fachada.jpg",
     "/videos/masterfit-carrapateira-satellite.mp4",
     "/videos/masterfit-carrapateira-final.jpg",
-    "/assets/brand/marquee/technogym-original.webp",
-    "/assets/brand/marquee/hammer-strength-original.webp",
     "/assets/brand/marquee/masterfit-original.webp",
     "/assets/brand/masterfit-logo-extracao-fiel-transparente.webp",
     "/videos/masterfit-bessa-satellite.mp4",
@@ -30,11 +67,23 @@
   ],
   "missingAssets": [],
   "secretScan": {
-    "files": 50,
+    "files": 55,
     "suspects": [],
     "scope": "heurístico, fontes/configuração; sem histórico Git, pois não há .git"
   },
   "publicFiles": [
+    {
+      "path": "public/.DS_Store",
+      "bytes": 6148
+    },
+    {
+      "path": "public/_headers",
+      "bytes": 191
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "bytes": 11520
+    },
     {
       "path": "public/assets/brand/marquee/hammer-strength-original.png",
       "bytes": 21985
@@ -76,6 +125,10 @@
       "bytes": 3588797
     },
     {
+      "path": "public/assets/references/masterfit-og-1200.jpg",
+      "bytes": 155227
+    },
+    {
       "path": "public/assets/units/aeroclube/interior-1-1122.jpg",
       "bytes": 231355
     },
@@ -86,6 +139,102 @@
     {
       "path": "public/assets/units/aeroclube/interior-1-640.jpg",
       "bytes": 100625
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-10-1122.jpg",
+      "bytes": 221770
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-10-320.jpg",
+      "bytes": 35467
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-10-640.jpg",
+      "bytes": 97707
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-11-1122.jpg",
+      "bytes": 201322
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-11-320.jpg",
+      "bytes": 36604
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-11-640.jpg",
+      "bytes": 94801
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-12-1122.jpg",
+      "bytes": 194125
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-12-320.jpg",
+      "bytes": 35878
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-12-640.jpg",
+      "bytes": 92977
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-13-1122.jpg",
+      "bytes": 202784
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-13-320.jpg",
+      "bytes": 36385
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-13-640.jpg",
+      "bytes": 92113
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-14-1122.jpg",
+      "bytes": 148357
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-14-320.jpg",
+      "bytes": 27448
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-14-640.jpg",
+      "bytes": 67819
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-15-1122.jpg",
+      "bytes": 150351
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-15-320.jpg",
+      "bytes": 27245
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-15-640.jpg",
+      "bytes": 70110
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-16-1122.jpg",
+      "bytes": 147999
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-16-320.jpg",
+      "bytes": 27553
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-16-640.jpg",
+      "bytes": 68706
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-17-1122.jpg",
+      "bytes": 167390
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-17-320.jpg",
+      "bytes": 24499
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-17-640.jpg",
+      "bytes": 68416
     },
     {
       "path": "public/assets/units/aeroclube/interior-2-1122.jpg",
@@ -124,6 +273,66 @@
       "bytes": 194817
     },
     {
+      "path": "public/assets/units/aeroclube/interior-5-1122.jpg",
+      "bytes": 168949
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-5-320.jpg",
+      "bytes": 27319
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-5-640.jpg",
+      "bytes": 74662
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-6-1122.jpg",
+      "bytes": 140952
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-6-320.jpg",
+      "bytes": 23649
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-6-640.jpg",
+      "bytes": 62966
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-7-1122.jpg",
+      "bytes": 146441
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-7-320.jpg",
+      "bytes": 23059
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-7-640.jpg",
+      "bytes": 63285
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-8-1122.jpg",
+      "bytes": 136774
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-8-320.jpg",
+      "bytes": 22433
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-8-640.jpg",
+      "bytes": 60945
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-9-1122.jpg",
+      "bytes": 138019
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-9-320.jpg",
+      "bytes": 24512
+    },
+    {
+      "path": "public/assets/units/aeroclube/interior-9-640.jpg",
+      "bytes": 62823
+    },
+    {
       "path": "public/assets/units/carrapateira/fachada.jpg",
       "bytes": 359044
     },
@@ -132,8 +341,36 @@
       "bytes": 143350
     },
     {
+      "path": "public/audio/masterfit-intro.mp3",
+      "bytes": 456872
+    },
+    {
+      "path": "public/favicon-32.png",
+      "bytes": 924
+    },
+    {
+      "path": "public/favicon.ico",
+      "bytes": 7304
+    },
+    {
+      "path": "public/icon-192.png",
+      "bytes": 12544
+    },
+    {
+      "path": "public/icon-512.png",
+      "bytes": 55095
+    },
+    {
       "path": "public/robots.txt",
-      "bytes": 23
+      "bytes": 78
+    },
+    {
+      "path": "public/site.webmanifest",
+      "bytes": 303
+    },
+    {
+      "path": "public/sitemap.xml",
+      "bytes": 605
     },
     {
       "path": "public/videos/masterfit-bessa-final.jpg",

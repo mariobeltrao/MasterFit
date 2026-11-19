@@ -1,6 +1,6 @@
 import { useEffect, useRef, type ElementType } from "react";
-import { ArrowUpRight, Check, Clock3 } from "lucide-react";
-import { aeroclubePricing, planWhatsAppUrl, type PricingPlan, type PricingCategory } from "../../data/pricing";
+import { ArrowUpRight, Check, Clock3, CreditCard } from "lucide-react";
+import { aeroclubePricing, annualVsRecurring, planWhatsAppUrl, type PricingPlan, type PricingCategory } from "../../data/pricing";
 import { Container } from "../ui";
 import "../../styles/pricing.css";
 
@@ -35,6 +35,10 @@ function PricingCard({ plan, category, whatsapp, idPrefix, headingLevel }: { pla
       </p>
       {plan.benefit && <p className="pricing-benefit"><Check size={17} aria-hidden="true" /><span>{plan.benefit}</span></p>}
       {category.id === "equilibrium" && <p className="pricing-card-access">Segunda a sexta: 10h–14h. Sábados, domingos e feriados: dentro do funcionamento da unidade.</p>}
+      <div className="pricing-payment">
+        <p className="pricing-payment-label"><CreditCard size={15} aria-hidden="true" />FORMAS DE PAGAMENTO</p>
+        <ul>{plan.payment.map(method => <li key={method}>{method}</li>)}</ul>
+      </div>
       <a className="button button-secondary pricing-cta" href={planWhatsAppUrl(whatsapp, plan.name, category.name)} target="_blank" rel="noopener noreferrer" aria-label={`Consultar ${plan.name.toLocaleLowerCase("pt-BR")} ${category.name} pelo WhatsApp`} aria-describedby={`${idPrefix}pricing-access-${category.id}`}>
         CONSULTAR ESTE PLANO <ArrowUpRight size={18} aria-hidden="true" />
       </a>
@@ -87,14 +91,14 @@ export function PricingSection({ whatsapp, sectionId = "planos", idPrefix = "", 
     <section className="section pricing-section" id={sectionId ?? undefined} aria-labelledby={titleId} ref={sectionRef}>
       <Container>
         <div className="pricing-heading">
-          <span className="eyebrow">{aeroclubePricing.eyebrow} / AEROCLUBE</span>
+          <span className="eyebrow">{aeroclubePricing.eyebrow} / JOÃO PESSOA – AEROCLUBE</span>
           <Title id={titleId} data-pricing-reveal>{aeroclubePricing.title}</Title>
           <p data-pricing-reveal>{aeroclubePricing.subtitle}</p>
         </div>
         <div className="pricing-categories">
           {aeroclubePricing.categories.map(category => (
             <div className={`pricing-category pricing-category-${category.id}`} key={category.id}>
-              <span className="eyebrow">CATEGORIA / AEROCLUBE</span>
+              <span className="eyebrow">CATEGORIA / JOÃO PESSOA – AEROCLUBE</span>
               <Sub>{category.name}</Sub>
               <p>{category.description}</p>
               <p className="pricing-starting">{category.startingPrice}</p>
@@ -104,6 +108,17 @@ export function PricingSection({ whatsapp, sectionId = "planos", idPrefix = "", 
               </div>
             </div>
           ))}
+        </div>
+        <div className="pricing-annual-compare" data-pricing-reveal>
+          <Sub>{annualVsRecurring.title}</Sub>
+          <dl>
+            {annualVsRecurring.options.map(option => (
+              <div key={option.name}>
+                <dt>{option.name}</dt>
+                <dd>{option.text}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
         <p className="pricing-comparison-label">COMPARE AS OPÇÕES POR PERÍODO</p>
         <div className="pricing-grid">

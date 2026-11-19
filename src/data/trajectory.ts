@@ -4,8 +4,10 @@ export interface Milestone {
   id: string;
   /** Visible date label. */
   label: string;
-  /** ISO date for <time dateTime>. */
-  dateTime: string;
+  /** ISO date for <time dateTime>; omitted on teasers (no date announced). */
+  dateTime?: string;
+  /** Teaser milestone: no date, rendered as a "mystery box". */
+  teaser?: boolean;
   title: string;
   description: string;
 }
@@ -29,6 +31,13 @@ export const trajectory: Milestone[] = [
     label: "OUT 2025",
     dateTime: "2025-10",
     title: "CHEGADA À CAPITAL",
-    description: "Em outubro de 2025, a rede inaugura a unidade no Aeroclube, em João Pessoa, com uma estrutura de dois pisos climatizados.",
+    description: "Em outubro de 2025, a rede inaugura a unidade João Pessoa – Aeroclube, com uma estrutura de dois pisos climatizados.",
+  },
+  {
+    id: "cajazeiras-em-breve",
+    teaser: true,
+    label: "EM BREVE",
+    title: "PRÓXIMA PARADA: CAJAZEIRAS",
+    description: "Uma nova unidade MasterFit está a caminho. Em breve, mais novidades.",
   },
 ];

@@ -318,6 +318,9 @@
   justify-content: space-between;
   gap: 1rem;
 }
+.cinema-playback-controls .cinema-sound {
+  margin-left: auto;
+}
 .cinema-progress {
   position: absolute;
   bottom: 0;
@@ -647,5 +650,16 @@
   }
   .cinema-preview-result {
     bottom: 6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .cinema-sound .cinema-control-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }

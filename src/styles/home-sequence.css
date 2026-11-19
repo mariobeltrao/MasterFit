@@ -17,12 +17,25 @@
 .timeline-step.is-active .timeline-marker { background: var(--color-primary); border-color: var(--color-primary); box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-primary) 9%, transparent); }
 .timeline-card { grid-column: 1; margin-right: clamp(2rem,5vw,5rem); padding: clamp(1.5rem,3vw,2.5rem); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; transition: border-color 450ms ease, transform 600ms ease, opacity 600ms ease; }
 .timeline-step:nth-of-type(even) .timeline-card { grid-column: 2; margin-right: 0; margin-left: clamp(2rem,5vw,5rem); }
-.timeline-card time { display: block; font-family: var(--font-display); font-size: clamp(2rem,4vw,3.7rem); letter-spacing: -.05em; color: var(--color-primary); line-height: 1; margin-bottom: 1.2rem; }
+.timeline-card time, .timeline-label { display: block; font-family: var(--font-display); font-size: clamp(2rem,4vw,3.7rem); letter-spacing: -.05em; color: var(--color-primary); line-height: 1; margin-bottom: 1.2rem; }
 .timeline-card h3 { font-size: clamp(1.1rem,1.7vw,1.4rem); margin-bottom: 1rem; }
 .timeline-card p { font-size: .92rem; line-height: 1.8; }
 .timeline-enhanced .timeline-step:not(.is-visible) .timeline-card { opacity: 0; transform: translateX(-30px); }
 .timeline-enhanced .timeline-step:nth-of-type(even):not(.is-visible) .timeline-card { transform: translateX(30px); }
 .timeline-step.is-visible .timeline-card:hover { border-color: var(--color-primary-dark); transform: translateY(-4px); }
+/* Teaser "mystery box" (Cajazeiras) */
+.timeline-step-teaser .timeline-card { position: relative; overflow: hidden; background: var(--color-background); border: 1px dashed color-mix(in srgb, var(--color-primary) 45%, var(--color-border)); }
+.timeline-step-teaser .timeline-card > :not(.timeline-teaser-mark) { position: relative; }
+.timeline-step-teaser .timeline-label { font-size: clamp(1.6rem,3.2vw,2.8rem); }
+.timeline-step-teaser .timeline-card p { color: color-mix(in srgb, var(--color-text-secondary) 80%, transparent); }
+.timeline-teaser-mark { position: absolute; right: -.05em; bottom: -.22em; font-family: var(--font-display); font-size: clamp(8rem,16vw,12rem); line-height: 1; color: var(--color-primary); opacity: .07; pointer-events: none; user-select: none; }
+.timeline-step-teaser .timeline-marker { background: var(--color-background); border-style: dashed; }
+.timeline-step-teaser.is-active .timeline-marker { background: var(--color-background); border: 2px solid var(--color-primary); animation: timeline-teaser-pulse 2.4s ease-in-out infinite; }
+.timeline-step-teaser.is-active .timeline-card { border-color: var(--color-primary-dark); box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary) 12%, transparent), 0 0 42px color-mix(in srgb, var(--color-primary) 10%, transparent); transition: border-color 450ms ease, box-shadow 800ms ease, transform 600ms ease, opacity 600ms ease; }
+@keyframes timeline-teaser-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 35%, transparent); }
+  50% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--color-primary) 0%, transparent); }
+}
 @media (max-width: 760px) {
   .timeline-step { grid-template-columns: 1fr; padding-left: 2rem; padding-bottom: 1.8rem; }
   .timeline-card, .timeline-step:nth-of-type(even) .timeline-card { grid-column: 1; margin: 0; }
@@ -32,7 +45,8 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .masterfit-reveal { opacity: 1; transform: none; transition: none; }
-  .timeline-card, .timeline-marker { transition: none; }
+  .timeline-card, .timeline-marker, .timeline-step-teaser.is-active .timeline-card { transition: none; }
+  .timeline-step-teaser.is-active .timeline-marker { animation: none; box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-primary) 9%, transparent); }
   .timeline-enhanced .timeline-step:not(.is-visible) .timeline-card, .timeline-enhanced .timeline-step:nth-of-type(even):not(.is-visible) .timeline-card { opacity: 1; transform: none; }
   .timeline-step.is-visible .timeline-card:hover { transform: none; }
 }

@@ -12,7 +12,16 @@ for(const c of [master,equilibrium]) {
  assert.equal(c.plans.filter(p=>p.benefit?.includes('Amigo VIP')).length,1);
  for(const p of c.plans) assert.equal(new URL(planWhatsAppUrl(units[0].whatsapp,p.name,c.name)).pathname,'/5583998325451');
 }
-assert.equal(master.access,'Acesso conforme as condições do plano Master e o funcionamento da unidade.');
+assert.equal(master.access,'Acesso livre conforme o horário de funcionamento da unidade.');
+for(const c of [master,equilibrium]) {
+ const pay=Object.fromEntries(c.plans.map(p=>[p.id,p.payment]));
+ assert.deepEqual(pay.mensal,['Cartão de crédito','Cartão de débito','PIX']);
+ assert.deepEqual(pay.trimestral,['PIX','Cartão']);
+ assert.deepEqual(pay.semestral,['PIX','Cartão']);
+ assert.match(pay.anual.join(' '),/crédito.*12 parcelas.*limite/);
+ assert.match(pay['anual-recorrente'].join(' '),/^Somente cartão de crédito/);
+ assert.match(c.disclosures[1],/limite do cartão/); assert.match(c.disclosures[2],/somente cartão de crédito/);
+}
 assert.match(equilibrium.access,/10h às 14h/);
 assert.match(equilibrium.access,/sábados, domingos e feriados/);
 assert.deepEqual(monthlyPricingByUnit['sao-jose-de-piranhas'].plans.map(p=>p.amount),['75,00','65,00']);

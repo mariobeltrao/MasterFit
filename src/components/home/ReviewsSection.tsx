@@ -11,10 +11,10 @@ export function ReviewsSection() {
           <span className="eyebrow">03 / A EXPERIÊNCIA DE QUEM TREINA</span>
           <h2 id="reviews-title">HISTÓRIAS QUE <span>INSPIRAM.</span></h2>
           <p>Mais do que equipamentos e estrutura, a experiência de quem treina é o que faz a diferença.</p>
-          <span className="reviews-attribution">AVALIAÇÕES DE ALUNOS — MASTERFIT AEROCLUBE</span>
+          <span className="reviews-attribution">AVALIAÇÕES DE ALUNOS — MASTERFIT JOÃO PESSOA – AEROCLUBE</span>
           <a className="text-link" href="https://maps.app.goo.gl/Cc3MJR5ZSSpdy6sC8" target="_blank" rel="noopener noreferrer">VER AVALIAÇÕES NO GOOGLE <ArrowUpRight size={18} aria-hidden="true" /></a>
         </div>
-        <ReviewStack3D reviews={aeroclubeReviews} unitLabel="Masterfit Aeroclube" />
+        <ReviewStack3D reviews={aeroclubeReviews} unitLabel="MasterFit João Pessoa – Aeroclube" />
       </Container>
     </section>
   );

@@ -15,11 +15,11 @@ export function usePageNavigation() {
     const title = unit?.name || titles[pathname] || "Página não encontrada";
     const descriptions: Record<string, string> = {
       "/planos":
-        "Planos e mensalidades das unidades MasterFit Aeroclube, São José de Piranhas e Carrapateira reunidos em um só lugar.",
+        "Planos e mensalidades das unidades MasterFit João Pessoa – Aeroclube, São José de Piranhas e Carrapateira reunidos em um só lugar.",
     };
     const description = unit
       ? `Conheça a MasterFit ${unit.name}: planos, horários, localização e canais oficiais de contato.`
-      : descriptions[pathname] || `${title}. Explore a MasterFit e suas unidades Aeroclube, São José de Piranhas e Carrapateira.`;
+      : descriptions[pathname] || `${title}. Explore a MasterFit e suas unidades João Pessoa – Aeroclube, São José de Piranhas e Carrapateira.`;
     document.title = `${title} | MasterFit`;
     document
       .querySelector('meta[name="description"]')

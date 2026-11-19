@@ -28,7 +28,7 @@ export function ReviewStack3D({
   return (
     <div className={`review-stack review-fan ${expanded ? "is-open" : ""}`}>
       <div className="review-fan-toolbar">
-        <span>{String(reviews.length).padStart(2, "0")} HISTÓRIAS REAIS / AEROCLUBE</span>
+        <span>{String(reviews.length).padStart(2, "0")} HISTÓRIAS REAIS / JOÃO PESSOA – AEROCLUBE</span>
         <button
           className="review-fan-toggle"
           type="button"

@@ -3,7 +3,7 @@ import { Pause, Play } from "lucide-react";
 import "../../styles/logo-marquee.css";
 
 /** Frase de efeito exibida entre as logos. Troque aqui para atualizar a esteira inteira. */
-const MARQUEE_PHRASE = "EVOLUÇÃO EM CADA TREINO.";
+const MARQUEE_PHRASE = "A FORÇA QUE TE FAZ MASTER";
 /** Pares logo + frase por grupo; cada grupo precisa passar de 100vw para não haver emenda. */
 const PAIRS_PER_GROUP = 4;
 

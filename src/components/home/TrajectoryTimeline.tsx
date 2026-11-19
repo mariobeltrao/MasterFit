@@ -61,10 +61,13 @@ export function TrajectoryTimeline() {
         </div>
         <ol className="trajectory-list" ref={listRef}>
           {trajectory.map((milestone) => (
-            <li className="timeline-step" key={milestone.id}>
+            <li className={`timeline-step${milestone.teaser ? " timeline-step-teaser" : ""}`} key={milestone.id}>
               <span className="timeline-marker" aria-hidden="true" />
               <article className="timeline-card">
-                <time dateTime={milestone.dateTime}>{milestone.label}</time>
+                {milestone.teaser && <span className="timeline-teaser-mark" aria-hidden="true">?</span>}
+                {milestone.teaser || !milestone.dateTime
+                  ? <span className="timeline-label">{milestone.label}<span className="sr-only"> — </span></span>
+                  : <time dateTime={milestone.dateTime}>{milestone.label}</time>}
                 <h3>{milestone.title}</h3>
                 <p>{milestone.description}</p>
               </article>

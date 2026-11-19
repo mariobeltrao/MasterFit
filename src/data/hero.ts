@@ -30,7 +30,7 @@ const videosByUnit: Partial<Record<string, DestinationVideo>> = {
   aeroclube: {
     src: "/videos/masterfit-bessa-satellite.mp4",
     finalFrame: "/videos/masterfit-bessa-final.jpg",
-    locationLabel: "AEROCLUBE — BESSA",
+    locationLabel: "JOÃO PESSOA – AEROCLUBE",
   },
 };
 

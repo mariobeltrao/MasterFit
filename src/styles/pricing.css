@@ -41,7 +41,18 @@
 .pricing-comparison-label { font-size: .7rem; letter-spacing: .1em; margin-block: 2rem 1rem; }
 .pricing-motion .pricing-card:nth-child(even) { transition-delay: 100ms; }
 .pricing-motion .pricing-card.pricing-visible:hover { transform: translateY(-4px); transition-delay: 0ms; }
+.pricing-payment { margin-bottom: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+.pricing-payment-label { display: flex; align-items: center; gap: .45rem; font-size: .66rem; font-weight: 800; letter-spacing: .1em; color: var(--color-text-secondary); margin-bottom: .5rem; }
+.pricing-payment-label svg { color: var(--color-primary); flex-shrink: 0; }
+.pricing-payment ul { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+.pricing-payment li { font-size: .78rem; line-height: 1.4; padding: .3rem .55rem; border: 1px solid var(--color-border); border-radius: 3px; overflow-wrap: anywhere; }
+.pricing-annual-compare { margin-top: 2.5rem; padding: clamp(1.25rem, 2.5vw, 2rem); border: 1px solid var(--color-primary-dark, var(--color-primary)); border-radius: 8px; background: var(--color-surface); }
+.pricing-annual-compare h3 { font-size: .85rem; letter-spacing: .08em; color: var(--color-primary); margin-bottom: 1rem; }
+.pricing-annual-compare dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2rem; }
+.pricing-annual-compare dt { font-weight: 800; font-size: .9rem; text-transform: uppercase; margin-bottom: .4rem; }
+.pricing-annual-compare dd { font-size: .85rem; line-height: 1.65; color: var(--color-text-secondary); }
 @media (max-width: 640px) {
+  .pricing-annual-compare dl { grid-template-columns: minmax(0, 1fr); }
   .pricing-grid, .pricing-categories, .pricing-disclosures { grid-template-columns: minmax(0, 1fr); }
   .pricing-motion .pricing-card:nth-child(even) { transition-delay: 0ms; }
 }

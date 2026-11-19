@@ -7,7 +7,7 @@ export function Units() {
       <PageHero
         eyebrow="Encontre a sua unidade"
         title="Três lugares. Seu próximo passo."
-        description="Explore Aeroclube, São José de Piranhas e Carrapateira. As informações oficiais de cada espaço serão adicionadas em breve."
+        description="Explore João Pessoa – Aeroclube, São José de Piranhas e Carrapateira. As informações oficiais de cada espaço serão adicionadas em breve."
       />
       <section className="section">
         <Container>

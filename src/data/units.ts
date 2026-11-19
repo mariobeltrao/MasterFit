@@ -50,7 +50,7 @@ const createUnit = (id: string, slug: string, name: string): Unit => ({
     id === "01"
       ? {
           src: "/assets/references/masterfit-fachada-1280.webp",
-          alt: "Fachada da unidade Aeroclube da MasterFit",
+          alt: "Fachada da unidade João Pessoa – Aeroclube da MasterFit",
         }
       : { alt: `Fotografia oficial da unidade ${name} — a fornecer` },
   gallery: ["Ambiente de treino", "Equipamentos", "Espaço da unidade"].map(
@@ -62,15 +62,15 @@ const createUnit = (id: string, slug: string, name: string): Unit => ({
   faqs: [],
 });
 const aeroclube: Unit = {
-  ...createUnit("01", "aeroclube", "Aeroclube"),
-  fullName: "Masterfit Aeroclube",
+  ...createUnit("01", "aeroclube", "João Pessoa – Aeroclube"),
+  fullName: "MasterFit João Pessoa – Aeroclube",
   presentation: {
-    title: "UNIDADE AEROCLUBE",
+    title: "UNIDADE JOÃO PESSOA – AEROCLUBE",
     subtitle:
       "Estrutura moderna, ambiente premium e equipamentos de qualidade para o seu treino.",
   },
   description:
-    "Na unidade Aeroclube, a Masterfit oferece um ambiente moderno, bem equipado e preparado para proporcionar uma excelente experiência de treino, com conforto, estrutura e praticidade.",
+    "Na unidade João Pessoa – Aeroclube, a Masterfit oferece um ambiente moderno, bem equipado e preparado para proporcionar uma excelente experiência de treino, com conforto, estrutura e praticidade.",
   address:
     "R. Francisco Leocádio Ribeiro Coutinho, 374 - Aeroclube, João Pessoa - PB, 58036-450",
   phone: "+55 83 99832-5451",
@@ -98,22 +98,22 @@ const aeroclube: Unit = {
   gallery: [
     {
       image: 4,
-      alt: "Vista interna da musculação na Aeroclube, com bancos, máquinas e iluminação geométrica.",
+      alt: "Vista interna da musculação na unidade João Pessoa – Aeroclube, com bancos, máquinas e iluminação geométrica.",
     },
     {
       image: 1,
-      alt: "Máquinas de musculação sob iluminação azul e branca na unidade Aeroclube.",
+      alt: "Máquinas de musculação sob iluminação azul e branca na unidade João Pessoa – Aeroclube.",
     },
-    { image: 2, alt: "Equipamentos de cardio alinhados na unidade Aeroclube." },
+    { image: 2, alt: "Equipamentos de cardio alinhados na unidade João Pessoa – Aeroclube." },
     {
       image: 3,
-      alt: "Estações de musculação e suportes de anilhas da unidade Aeroclube.",
+      alt: "Estações de musculação e suportes de anilhas da unidade João Pessoa – Aeroclube.",
     },
     // Fotos horizontais (landscape) ficam inteiras; as verticais seguem o recorte 4:5.
     {
       image: 5,
       landscape: true,
-      alt: "Vista do piso superior para as áreas de musculação e cardio da unidade Aeroclube.",
+      alt: "Vista do piso superior para as áreas de musculação e cardio da unidade João Pessoa – Aeroclube.",
     },
     {
       image: 6,
@@ -128,7 +128,7 @@ const aeroclube: Unit = {
     {
       image: 8,
       landscape: true,
-      alt: "Fileiras de máquinas de musculação e suportes de anilhas na unidade Aeroclube.",
+      alt: "Fileiras de máquinas de musculação e suportes de anilhas na unidade João Pessoa – Aeroclube.",
     },
     {
       image: 9,
@@ -153,7 +153,7 @@ const aeroclube: Unit = {
     },
     {
       image: 14,
-      alt: "Máquinas de musculação, incluindo banco Scott, na unidade Aeroclube.",
+      alt: "Máquinas de musculação, incluindo banco Scott, na unidade João Pessoa – Aeroclube.",
     },
     {
       image: 15,
@@ -166,7 +166,7 @@ const aeroclube: Unit = {
     {
       image: 17,
       landscape: true,
-      alt: "Fachada da MasterFit Aeroclube decorada com balões.",
+      alt: "Fachada da MasterFit João Pessoa – Aeroclube decorada com balões.",
     },
   ].map(({ image, alt, landscape }) => ({
     src: `/assets/units/aeroclube/interior-${image}-1122.jpg`,

@@ -209,6 +209,17 @@ O projeto já está configurado para a Vercel em `vercel.json`: build com Vite, 
 
 ## Atualizações
 
+### Ajustes finais: nome da unidade, pagamentos, trilha e Cajazeiras — 19/11/2026
+
+- **Nome da unidade:** todo texto visível passou a dizer “João Pessoa – Aeroclube” (“JOÃO PESSOA – AEROCLUBE” em caixa alta): `units.ts` (nome, `fullName`, título, alts), `hero.ts`, `pricing.ts` (textos e mensagem de WhatsApp), `PricingSection`, avaliações, timeline, `usePageNavigation.ts`, `Units.tsx` e `index.html`. A rota `/unidades/aeroclube`, os assets, o endereço oficial e os depoimentos não mudaram.
+- **Esteira:** a frase agora é “A FORÇA QUE TE FAZ MASTER”.
+- **Pagamentos (Master e Equilibrium):** `PricingPlan.payment` é exibido em cada card (“FORMAS DE PAGAMENTO”). Mensal: crédito, débito ou PIX. Trimestral: PIX ou cartão. Semestral: igual ao trimestral, marcado `CONFIRMAR COM O PROPRIETÁRIO`. Anual: crédito em 12x, com o valor total descontado do limite. Anual com recorrência: somente crédito, só a mensalidade ocupa o limite. Um bloco “ANUAL × ANUAL COM RECORRÊNCIA” acima da grade explica a diferença, e as notas `**`/`***` foram reescritas.
+- **Acesso do Master:** “Acesso livre conforme o horário de funcionamento da unidade.”
+- **Trilha da Hero:** `public/audio/masterfit-intro.mp3` (28 s, 116 BPM, 128 kbps, 457 KB) é uma faixa original sintetizada por `audit/soundtrack-synth.py`, sem material de terceiros. O hook `useIntroSoundtrack` acompanha o vídeo (fade-in de 400 ms, fade-out de 600 ms, pausa com aba oculta, reinicia em “Reproduzir animação”) e trata o bloqueio de autoplay em silêncio. O botão de som fica em `cinema-playback-controls`, e a escolha vale para a sessão. Com movimento reduzido ou sem vídeo, não há som nem botão.
+- **Timeline:** novo marco teaser “PRÓXIMA PARADA: CAJAZEIRAS” (sem data), com borda tracejada, “?” em marca-d'água, marcador oco com pulso e brilho discreto (estáticos com movimento reduzido). Cajazeiras não aparece em nenhuma outra parte do site.
+
+Verificações: `npm run lint`, `npm run build`, os seis testes das partículas e `audit/verify-static.mjs` (com novas asserções de pagamento e acesso) passaram. No navegador: nenhum “Aeroclube” sozinho fora do endereço, sem overflow horizontal a 375 px, áudio sincronizado com o vídeo, silenciar/ativar, pausa e saída liberando o áudio, console sem erros.
+
 ### Esteira da marca, página de planos e datas da trajetória — 18/11/2026
 
 - **Esteira (Home):** `InfiniteLogoMarquee.tsx` e `logo-marquee.css` exibem apenas a logo MasterFit (mesma máscara do arquivo original), intercalada com a frase de `MARQUEE_PHRASE` (“EVOLUÇÃO EM CADA TREINO.”) e um ponto amarelo. Quatro pares por grupo garantem grupos maiores que a viewport; os dois grupos idênticos com `translateX(-50%)`, a velocidade (~50 px/s desktop, ~40 px/s mobile), a pausa e os gradientes foram mantidos. Com movimento reduzido, aparece um único par estático e centralizado. Technogym e Hammer Strength deixaram de ser referenciados; os arquivos continuam em `public/assets/brand/marquee/`.
