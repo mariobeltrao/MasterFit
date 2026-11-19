@@ -48,7 +48,7 @@ Três caminhos, um para cada unidade. Ao escolher um destino, um vídeo faz a ap
 
 Timeline vertical com os marcos da rede. A linha amarela acompanha a rolagem e retrocede ao subir a página.
 
-![Timeline com os marcos da rede](docs/readme/03-trajetoria.jpg)
+![Timeline com os marcos de 2020, maio de 2025 e outubro de 2025](docs/readme/03-trajetoria.jpg)
 
 ### Nossas unidades
 
@@ -217,7 +217,7 @@ O projeto já está configurado para a Vercel em `vercel.json`: build com Vite, 
 
 Verificações: `npm run lint`, `npm run build`, os seis testes das partículas e `audit/verify-static.mjs` passaram. Hashes SHA-1 confirmaram Hero, vídeo, partículas, Header, Footer, avaliações, dados das unidades, preços e tokens sem alteração; o HTML renderizado das três páginas de unidade ficou idêntico ao anterior (SHA-256). No navegador: esteira sem as marcas removidas, grupos de mesma largura, pausar/retomar e o modo de movimento reduzido (regras ativadas via CSSOM); `/planos` com três blocos, âncoras, 13 links de WhatsApp idênticos aos das páginas das unidades, nenhum `id` duplicado, um único `h1` e títulos sem saltos de nível; timeline 2020 → MAI 2025 → OUT 2025 com barra de progresso e marcos ativos corretos; menu mobile em 320 px com Esc e retorno de foco; sem overflow horizontal em 320, 390, 820 e 1280 px; console sem erros.
 
-Pendências: o print `docs/readme/03-trajetoria.jpg` ainda mostra as datas antigas e precisa ser refeito; o histórico em `docs/HISTORICO-DESENVOLVIMENTO.md` foi mantido como registro da época.
+O print `docs/readme/03-trajetoria.jpg` foi refeito com as novas datas (1600×833, mesmo enquadramento). O histórico em `docs/HISTORICO-DESENVOLVIMENTO.md` foi mantido como registro da época.
 
 ## Documentação
 
