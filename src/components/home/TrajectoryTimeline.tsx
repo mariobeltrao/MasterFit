@@ -61,10 +61,10 @@ export function TrajectoryTimeline() {
         </div>
         <ol className="trajectory-list" ref={listRef}>
           {trajectory.map((milestone) => (
-            <li className="timeline-step" key={milestone.year}>
+            <li className="timeline-step" key={milestone.id}>
               <span className="timeline-marker" aria-hidden="true" />
               <article className="timeline-card">
-                <time dateTime={milestone.year}>{milestone.year}</time>
+                <time dateTime={milestone.dateTime}>{milestone.label}</time>
                 <h3>{milestone.title}</h3>
                 <p>{milestone.description}</p>
               </article>

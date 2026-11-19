@@ -1,18 +1,34 @@
 // Milestones supplied by the project owner; no dates inferred from media.
-export const trajectory = [
+export interface Milestone {
+  /** Unique key; never derive React keys from the year (two milestones share 2025). */
+  id: string;
+  /** Visible date label. */
+  label: string;
+  /** ISO date for <time dateTime>. */
+  dateTime: string;
+  title: string;
+  description: string;
+}
+export const trajectory: Milestone[] = [
   {
-    year: "2020",
+    id: "sao-jose-2020",
+    label: "2020",
+    dateTime: "2020-11-19",
     title: "O COMEÇO NO SERTÃO",
     description: "Em 19 de novembro, nasce a primeira MasterFit no Centro de São José de Piranhas, com foco em musculação e uma estrutura moderna para a cidade.",
   },
   {
-    year: "2023",
+    id: "carrapateira-2025-05",
+    label: "MAI 2025",
+    dateTime: "2025-05",
     title: "EXPANSÃO EM CARRAPATEIRA",
-    description: "No segundo semestre, a MasterFit chega a Carrapateira e amplia sua presença no Sertão, com musculação e treinamento funcional.",
+    description: "Em maio de 2025, a MasterFit chega a Carrapateira e amplia sua presença no Sertão, com musculação e treinamento funcional.",
   },
   {
-    year: "2024",
+    id: "aeroclube-2025-10",
+    label: "OUT 2025",
+    dateTime: "2025-10",
     title: "CHEGADA À CAPITAL",
-    description: "Em dezembro, a rede inaugura a unidade no Aeroclube, em João Pessoa, com uma estrutura de dois pisos climatizados.",
+    description: "Em outubro de 2025, a rede inaugura a unidade no Aeroclube, em João Pessoa, com uma estrutura de dois pisos climatizados.",
   },
 ];

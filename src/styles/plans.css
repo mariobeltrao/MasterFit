@@ -1,0 +1,90 @@
+/* Página /planos: reúne os planos das unidades sem alterar os estilos das páginas de unidade. */
+.plans-anchors {
+  border-block: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.plans-anchors ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 1.25rem 0;
+  list-style: none;
+}
+.plans-anchors a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color var(--transition), color var(--transition);
+}
+.plans-anchors a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.plans-unit {
+  border-top: 1px solid var(--color-border);
+}
+.plans-unit-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 2rem;
+  padding-top: var(--section-space);
+}
+.plans-unit-header .eyebrow {
+  color: var(--color-primary);
+}
+.plans-unit .pricing-section {
+  border-block: 0;
+  padding-top: 2.5rem;
+}
+
+/* Títulos rebaixados um nível (h2 da unidade acima): mesma aparência das páginas de unidade. */
+.plans-unit .pricing-heading h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 4.8vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+  margin-block: 1.2rem;
+}
+.plans-unit .pricing-category h4 {
+  font: 800 clamp(1.35rem, 3vw, 2.5rem)/1.2 var(--font-body);
+  letter-spacing: -0.025em;
+  margin-block: 1rem;
+  overflow-wrap: anywhere;
+}
+.plans-unit .pricing-access h5 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-block: 0 0.75rem;
+}
+.plans-unit .pricing-card h4 {
+  margin-block: 1.25rem 0;
+  font: 800 1rem/1.4 var(--font-body);
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+.plans-unit .pricing-disclosures h4 {
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-block: 0 1rem;
+}
+.plans-unit .pricing-category-equilibrium .pricing-access h5 {
+  color: var(--color-primary);
+}

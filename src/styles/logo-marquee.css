@@ -42,14 +42,32 @@
   width: auto;
   color: inherit;
 }
-.logo-marquee-item.technogym .marquee-logo {
-  height: 42px;
-}
-.logo-marquee-item.hammer-strength .marquee-logo {
-  height: 56px;
-}
 .logo-marquee-item.masterfit .marquee-logo {
   height: 66px;
+}
+.logo-marquee-pair {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--marquee-gap);
+}
+.logo-marquee-phrase {
+  flex: none;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+.logo-marquee-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
 }
 .logo-marquee::before,
 .logo-marquee::after {
@@ -101,12 +119,6 @@
     height: 104px;
     --marquee-gap: 2.5rem;
   }
-  .logo-marquee-item.technogym .marquee-logo {
-    height: 32px;
-  }
-  .logo-marquee-item.hammer-strength .marquee-logo {
-    height: 44px;
-  }
   .logo-marquee-item.masterfit .marquee-logo {
     height: 48px;
   }
@@ -135,8 +147,19 @@
     height: auto;
     gap: 1.5rem 3rem;
   }
+  .logo-marquee-pair {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    max-width: 100%;
+  }
+  .logo-marquee-phrase {
+    white-space: normal;
+    text-align: center;
+  }
   .logo-marquee-group + .logo-marquee-group,
-  .logo-marquee-item:nth-child(n + 4),
+  .logo-marquee-pair:nth-child(n + 2),
+  .logo-marquee-dot,
   .logo-marquee-toggle {
     display: none;
   }

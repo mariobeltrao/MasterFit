@@ -48,7 +48,7 @@ Três caminhos, um para cada unidade. Ao escolher um destino, um vídeo faz a ap
 
 Timeline vertical com os marcos da rede. A linha amarela acompanha a rolagem e retrocede ao subir a página.
 
-![Timeline com os marcos de 2020, 2023 e 2024](docs/readme/03-trajetoria.jpg)
+![Timeline com os marcos da rede](docs/readme/03-trajetoria.jpg)
 
 ### Nossas unidades
 
@@ -78,10 +78,11 @@ Todas as unidades usam um único template, com apresentação, fotos e vídeos r
 
 - **Hero cinematográfica:** prévia por hover, abertura por clique, teclado ou toque; controles de pausar, continuar, pular e voltar; imagem alternativa em caso de erro; `Esc` para retornar. Só o vídeo escolhido é carregado.
 - **Fundo de partículas magnéticas** desenhado em `<canvas>`, com física independente da taxa de quadros e densidade reduzida no mobile.
-- **Faixa infinita de logos** com botão de pausa.
+- **Esteira da marca** com a logo MasterFit intercalada a uma frase de efeito, sem emenda e com botão de pausa.
 - **Timeline sincronizada com a rolagem**, com entradas animadas que acontecem uma única vez.
 - **Leque de depoimentos** sem setas nem modal: a última história escolhida permanece visível.
 - **Galeria de fotos** com miniaturas, ampliação e navegação.
+- **Página de planos** (`/planos`) com as opções das três unidades em um só lugar, lidas das mesmas fontes de dados das páginas das unidades.
 - **Planos por unidade**, com CTAs que abrem o WhatsApp já com a unidade e o plano escolhidos na mensagem.
 - **Mapas de localização** e links oficiais de Instagram e WhatsApp por unidade.
 - **Página 404** com `noindex` e redirecionamento da antiga rota `/sobre` para a seção de trajetória.
@@ -134,7 +135,7 @@ src/
 │   └── ui/          Botões, títulos de seção, container e outros blocos reutilizáveis
 ├── data/            Unidades, planos, avaliações, trajetória e destinos da Hero
 ├── hooks/           Navegação (título, descrição, foco e âncoras) e revelações por rolagem
-├── pages/           Home, Unidades, Contato e 404
+├── pages/           Home, Unidades, Planos, Contato e 404
 ├── routes/          Definição das rotas
 └── styles/          Tokens de design e estilos por seção
 public/
@@ -151,6 +152,7 @@ public/
 | `/unidades/aeroclube` | Unidade Aeroclube |
 | `/unidades/sao-jose-de-piranhas` | Unidade São José de Piranhas |
 | `/unidades/carrapateira` | Unidade Carrapateira |
+| `/planos` | Planos de todas as unidades |
 | `/contato` | Canais por unidade |
 | `/sobre` | Redireciona para `/#trajetoria` |
 | Qualquer outra | Página 404 (`noindex`) |
@@ -204,6 +206,18 @@ node --experimental-strip-types --test src/components/home/magneticParticles.tes
 ## Deploy
 
 O projeto já está configurado para a Vercel em `vercel.json`: build com Vite, saída em `dist/`, redirecionamento de todas as rotas para `index.html` (SPA) e cabeçalhos `X-Content-Type-Options`, `Referrer-Policy` e `X-Frame-Options`.
+
+## Atualizações
+
+### Esteira da marca, página de planos e datas da trajetória — 18/11/2026
+
+- **Esteira (Home):** `InfiniteLogoMarquee.tsx` e `logo-marquee.css` exibem apenas a logo MasterFit (mesma máscara do arquivo original), intercalada com a frase de `MARQUEE_PHRASE` (“EVOLUÇÃO EM CADA TREINO.”) e um ponto amarelo. Quatro pares por grupo garantem grupos maiores que a viewport; os dois grupos idênticos com `translateX(-50%)`, a velocidade (~50 px/s desktop, ~40 px/s mobile), a pausa e os gradientes foram mantidos. Com movimento reduzido, aparece um único par estático e centralizado. Technogym e Hammer Strength deixaram de ser referenciados; os arquivos continuam em `public/assets/brand/marquee/`.
+- **Planos (`/planos`):** nova página `src/pages/Plans.tsx` com `PageHero`, âncoras por unidade, um bloco por unidade (`planos-aeroclube`, `planos-sao-jose-de-piranhas`, `planos-carrapateira`) com link para a página da unidade e `CTASection` para `/unidades`. Os preços vêm sempre de `pricing.ts` e `monthlyPricing.ts`, pelos componentes existentes. `PricingSection` e `MonthlyPricingSection` ganharam props opcionais `sectionId`, `idPrefix` e `headingLevel`, cujo padrão reproduz a saída anterior; `plans.css` aplica aos títulos rebaixados a mesma aparência das páginas das unidades. Item “Planos” no menu e no rodapé (`site.ts`), rota, título e descrição (`usePageNavigation.ts`) e entrada no `sitemap.xml`. Em `global.css`, os links do menu não quebram linha entre 761 e 1050 px.
+- **Trajetória:** `trajectory.ts` corrigido conforme o proprietário: Carrapateira em maio de 2025 e Aeroclube em outubro de 2025; São José de Piranhas (19/11/2020) mantido. Cada marco tem `id` (usado como `key`), rótulo visível (“2020”, “MAI 2025”, “OUT 2025”) e `dateTime` ISO.
+
+Verificações: `npm run lint`, `npm run build`, os seis testes das partículas e `audit/verify-static.mjs` passaram. Hashes SHA-1 confirmaram Hero, vídeo, partículas, Header, Footer, avaliações, dados das unidades, preços e tokens sem alteração; o HTML renderizado das três páginas de unidade ficou idêntico ao anterior (SHA-256). No navegador: esteira sem as marcas removidas, grupos de mesma largura, pausar/retomar e o modo de movimento reduzido (regras ativadas via CSSOM); `/planos` com três blocos, âncoras, 13 links de WhatsApp idênticos aos das páginas das unidades, nenhum `id` duplicado, um único `h1` e títulos sem saltos de nível; timeline 2020 → MAI 2025 → OUT 2025 com barra de progresso e marcos ativos corretos; menu mobile em 320 px com Esc e retorno de foco; sem overflow horizontal em 320, 390, 820 e 1280 px; console sem erros.
+
+Pendências: o print `docs/readme/03-trajetoria.jpg` ainda mostra as datas antigas e precisa ser refeito; o histórico em `docs/HISTORICO-DESENVOLVIMENTO.md` foi mantido como registro da época.
 
 ## Documentação
 

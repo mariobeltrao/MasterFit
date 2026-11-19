@@ -10,6 +10,7 @@ export const site = {
 export const navigation = [
   { to: "/", label: "Início" },
   { to: "/unidades", label: "Unidades" },
+  { to: "/planos", label: "Planos" },
   { to: "/#trajetoria", label: "Nossa História" },
   { to: "/contato", label: "Contato" },
 ];

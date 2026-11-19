@@ -780,6 +780,10 @@ svg {
   .navigation {
     gap: 1rem;
   }
+  /* Item "Planos": mantém cada link em uma linha logo acima do breakpoint mobile. */
+  .navigation > a {
+    white-space: nowrap;
+  }
   .brand {
     font-size: 1.3rem;
   }
